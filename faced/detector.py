@@ -1,4 +1,4 @@
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import cv2
 import numpy as np
 import os
@@ -6,6 +6,7 @@ import os
 from faced.const import YOLO_TARGET, YOLO_SIZE, CORRECTOR_SIZE, MODELS_PATH
 from faced.utils import iou
 
+tf.disable_v2_behavior()
 
 class FaceDetector(object):
 
